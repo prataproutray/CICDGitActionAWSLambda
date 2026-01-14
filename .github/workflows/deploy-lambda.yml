@@ -6,7 +6,7 @@ on:
 
 env:
   AWS_REGION: ${{ secrets.AWS_REGION }}
-  LAMBDA_FUNCTION_NAME: "CICDAwsTest"
+  LAMBDA_FUNCTION_NAME: "APIHost"
 
 jobs:
   build-and-deploy:
