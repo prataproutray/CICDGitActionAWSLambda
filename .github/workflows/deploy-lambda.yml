@@ -6,7 +6,7 @@ on:
 
 env:
   AWS_REGION: ${{ secrets.AWS_REGION }}
-  LAMBDA_FUNCTION_NAME: "APIHost"
+  LAMBDA_FUNCTION_NAME: "AppAndServices"
 
 jobs:
   build-and-deploy:
