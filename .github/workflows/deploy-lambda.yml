@@ -38,4 +38,5 @@ jobs:
  
       - name: Deploy to Lambda
         run: |
-          dotnet lambda deploy-function $LAMBDA_FUNCTION_NAME  --function-version 1 --package bin/Release/net8.0/publish.zip
+          dotnet lambda deploy-function $LAMBDA_FUNCTION_NAME --package bin/Release/net8.0/publish.zip
+
