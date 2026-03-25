@@ -6,7 +6,7 @@ on:
 
 env:
   AWS_REGION: ${{ secrets.AWS_REGION }}
-  LAMBDA_FUNCTION_NAME: "AppAndServices"
+  LAMBDA_FUNCTION_NAME: "FirstApp"
 
 jobs:
   build-and-deploy:
