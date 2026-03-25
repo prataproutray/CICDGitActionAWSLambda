@@ -35,7 +35,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
-
+ 
       - name: Deploy to Lambda
         run: |
-          dotnet lambda deploy-function $LAMBDA_FUNCTION_NAME --package bin/Release/net8.0/publish.zip
+          dotnet lambda deploy-function $LAMBDA_FUNCTION_NAME  --function-version 1 --package bin/Release/net8.0/publish.zip
