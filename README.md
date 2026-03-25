@@ -1,2 +1,2 @@
 # CICDGitActionAWSLambda
-Test Lambda AWS
+Test Lambda AWS 12
