@@ -38,4 +38,4 @@ jobs:
  
       - name: Deploy to Lambda
         run: |
-          dotnet lambda deploy-function $LAMBDA_FUNCTION_NAME --function-role arn:aws:iam::awspratap:role/func1-role-rq6jfgm9 --disable-interactive true
+          dotnet lambda deploy-function $LAMBDA_FUNCTION_NAME --function-runtime dotnet8 --function-role arn:aws:iam::awspratap:role/func1-role-rq6jfgm9 --disable-interactive true
