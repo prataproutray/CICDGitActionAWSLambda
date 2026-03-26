@@ -38,5 +38,4 @@ jobs:
  
       - name: Deploy to Lambda
         run: |
-          dotnet lambda deploy-function $LAMBDA_FUNCTION_NAME --package bin/Release/net8.0/publish.zip
-
+          dotnet lambda deploy-function $LAMBDA_FUNCTION_NAME --function-role arn:aws:iam::awspratap:role/func1-role-rq6jfgm9 --disable-interactive
