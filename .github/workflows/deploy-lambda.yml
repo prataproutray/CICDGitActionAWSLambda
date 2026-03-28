@@ -6,7 +6,7 @@ on:
 
 env:
   AWS_REGION: ${{ secrets.AWS_REGION }}
-  LAMBDA_FUNCTION_NAME: "FirstApp"
+  LAMBDA_FUNCTION_NAME: "Func-2"
 
 jobs:
   build-and-deploy:
@@ -35,7 +35,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
-
+ 
       - name: Deploy to Lambda
         run: |
-          dotnet lambda deploy-function $LAMBDA_FUNCTION_NAME --function-version  --package bin/Release/net8.0/publish.zip
+          dotnet lambda deploy-function $LAMBDA_FUNCTION_NAME --function-runtime dotnet8 --function-memory-size 512 --function-timeout 60 --function-handler CICDApiAWSLambda --function-role arn:aws:iam::awspratap:role/func1-role-rq6jfgm9 --disable-interactive true
