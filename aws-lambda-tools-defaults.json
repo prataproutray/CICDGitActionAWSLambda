@@ -2,13 +2,12 @@
   "Information": [
     "This file provides default values for the AWS Lambda commands added to the .NET Core CLI."
   ],
-  "profile": "",
-  "region": "us-east-1",
   "configuration": "Release",
   "framework": "net8.0",
   "function-runtime": "dotnet8",
   "function-memory-size": 512,
-  "function-timeout": 30,
-  "function-handler": "CICDApiAWSLambda"
-
+  "function-timeout": 60,
+  "function-handler": "CICDApiAWSLambda",
+  "function-role": "arn:aws:iam::423466576960:role/aws_lambda_role_1",
+  "disable-inteactive": true
 }
