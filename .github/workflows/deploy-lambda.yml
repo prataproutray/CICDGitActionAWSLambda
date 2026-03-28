@@ -38,4 +38,4 @@ jobs:
  
       - name: Deploy to Lambda
         run: |
-          dotnet lambda deploy-function $LAMBDA_FUNCTION_NAME --function-runtime dotnet8 --function-memory-size 512 --function-timeout 60 --function-handler CICDApiAWSLambda --function-role arn:aws:iam::awspratap:role/func1-role-rq6jfgm9 --disable-interactive true
+          dotnet lambda deploy-function $LAMBDA_FUNCTION_NAME --function-runtime dotnet8 --function-memory-size 512 --function-timeout 60 --function-handler CICDApiAWSLambda --function-role arn:aws:iam::awspratap:role/aws_lambda_func_role-1  --disable-interactive true
